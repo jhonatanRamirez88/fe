@@ -27,6 +27,11 @@ public class UserCredential {
 		return password;
 	}
 
+	@Override
+	public String toString() {
+		return "UserCredential [username=" + username + ", password=" + password + "]";
+	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}

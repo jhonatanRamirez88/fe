@@ -40,4 +40,11 @@ public class CostoIndirectoServiceImpl implements CostoIndirectoService{
 	public CostoIndirecto findCostoIndirectoById(int id) {
 		return costoIndirectoRepository.findById(id);
 	}
+
+	@Override
+	public CostoIndirectoModel addCostoIndirecto(CostoIndirectoModel costoIndirectoModel) {
+		CostoIndirecto costoIndirecto = costoIndirectoRepository.save(costoIndirectoConverter.convertCostoIndirectoModel2CostoIndirecto(costoIndirectoModel));
+		
+		return costoIndirectoConverter.convertCostoIndirecto2CostoIndirectoModel(costoIndirecto);
+	}
 }

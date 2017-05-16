@@ -9,4 +9,5 @@ public interface CostoIndirectoService {
 	public abstract List<CostoIndirectoModel> ListaTodosCostosIndirectos();
 	public abstract CostoIndirectoModel findCostoIndirectoByIdModel(int id);
 	public abstract CostoIndirecto findCostoIndirectoById(int id);
+	public abstract CostoIndirectoModel addCostoIndirecto(CostoIndirectoModel costoIndirectoModel);
 }
